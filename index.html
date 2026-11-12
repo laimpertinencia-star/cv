@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Elena Domata — графический и веб-дизайнер. Резюме: проекты, опыт, образование, инструменты.">
+<title>Резюме Elena Domata</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2EEE5; --surface:#FBF9F4; --ink:#17110A; --muted:#6B6358; --line:#DCD5C8; --accent:#B9502F; --ok:#3E8E4A;
+  --hero-bg:#161412; --hero-ink:#F2EEE5; --hero-muted:#A39B8F;
+  --f-display:"Onest",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --f-body:"Onest",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141210; --surface:#1C1A17; --ink:#EFEAE0; --muted:#A39B8F; --line:#33302B; --accent:#E07A57; --ok:#6FBF73;
+  --hero-bg:#0D0C0A; --hero-ink:#F2EEE5; --hero-muted:#A39B8F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141210; --surface:#1C1A17; --ink:#EFEAE0; --muted:#A39B8F; --line:#33302B; --accent:#E07A57; --ok:#6FBF73;
+  --hero-bg:#0D0C0A; --hero-ink:#F2EEE5; --hero-muted:#A39B8F; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1.5px}
+a:hover{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+
+.hero{background:var(--hero-bg);color:var(--hero-ink)}
+.hero .wrap{padding-block:56px 48px;display:grid;gap:28px}
+.eyebrow{font:500 12px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--hero-muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+h1{font:500 clamp(44px,8vw,84px)/.98 var(--f-display);letter-spacing:-.02em;margin:0;text-wrap:balance}
+.lead{font-size:clamp(18px,2.2vw,21px);line-height:1.45;max-width:36em;margin:0;color:var(--hero-ink)}
+.lead b{font-weight:600}
+.contacts{display:flex;flex-wrap:wrap;gap:12px 28px;padding-top:24px;border-top:1px solid #2E2A26;font:400 15px/1.4 var(--f-mono)}
+.contacts span{color:var(--hero-muted);margin-right:8px}
+.contacts a{color:var(--hero-ink)}
+.status{display:inline-flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:#6FBF73;flex:none}
+
+main .wrap{padding-block:16px 72px}
+section{display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px 40px;padding-block:36px;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2{font:500 12px/1.6 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:4px 0 0}
+.body{min-width:0;display:grid;gap:22px}
+p{margin:0;max-width:40em}
+.muted{color:var(--muted)}
+
+.job h3,.proj h3,.edu h3{font:600 19px/1.3 var(--f-display);margin:0 0 4px}
+.meta{font:400 13px/1.5 var(--f-mono);letter-spacing:.04em;color:var(--muted);margin-bottom:8px}
+ul{margin:0;padding-left:1.1em;display:grid;gap:6px;max-width:40em}
+li::marker{color:var(--accent)}
+
+.projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:grid;gap:6px;align-content:start}
+.proj .tag{font:500 11px/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.proj p{font-size:15px;line-height:1.45;color:var(--muted)}
+.proj a{font:500 13px/1.4 var(--f-mono);text-decoration:none;color:var(--ink);margin-top:6px}
+.proj a::after{content:" →";color:var(--accent)}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:400 14px/1 var(--f-mono);padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.rows{display:grid;gap:10px}
+.row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px}
+.row b{font-weight:500}
+
+footer .wrap{padding-block:0 48px;font:400 13px/1.5 var(--f-mono);color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:720px){
+  section{grid-template-columns:1fr;gap:14px;padding-block:28px}
+  .row{grid-template-columns:1fr;gap:2px}
+  .hero .wrap{padding-block:40px 36px}
+}
+@media (prefers-reduced-motion:no-preference){a{transition:color .15s}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span>Резюме · 2026</span><span>Москва · удалённо</span></div>
+    <h1>Elena Domata</h1>
+    <p class="lead"><b>Графический и веб-дизайнер.</b> Создаю айдентику, упаковку и мерч, презентации и сайты на Tilda — от знака до живого сайта, собранного своими руками. Пять лет управляю проектами в IT HR, поэтому держу сроки и говорю с заказчиком на одном языке.</p>
+    <div class="contacts">
+      <div><span>Telegram</span><a href="https://t.me/la_krizia">@la_krizia</a></div>
+      <div><span>Behance</span><a href="https://www.behance.net/domata_design">behance.net/domata_design</a></div>
+      <div class="status"><i class="dot" aria-hidden="true"></i>Открыта к проектам и фрилансу</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section>
+      <h2>Что делаю</h2>
+      <div class="body">
+        <ul>
+          <li>Айдентика, логотипы и логобуки — знак с идеей и правила, по которым бренд одинаково звучит везде.</li>
+          <li>Упаковка и мерч — этикетки, пачки, принты на одежду, файлы для печати и производства.</li>
+          <li>Презентации и вёрстка — презентации, брошюры, лифлеты, афиши.</li>
+          <li>Сайты на Tilda — лендинги и многостраничные сайты: дизайн и сборка с собственным кодом на HTML, CSS и JavaScript.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Избранные проекты</h2>
+      <div class="body">
+        <div class="projects">
+          <article class="proj">
+            <span class="tag">Айдентика · упаковка · 2026</span>
+            <h3>ZERNO</h3>
+            <p>Айдентика городской кофейни: знак-цветок, в котором лепесток указывает происхождение лота. Дипломный проект.</p>
+            <a href="https://www.behance.net/gallery/256352623/ZERNO-ajdentika-gorodskoj-kofejni">Кейс на Behance</a>
+          </article>
+          <article class="proj">
+            <span class="tag">Сайт · Tilda · заказ</span>
+            <h3>«Говорю. Уверенно»</h3>
+            <p>Лендинг тренинга по ораторскому мастерству с тестом голоса прямо в браузере. Сайт работает и принимает заявки.</p>
+            <a href="https://www.behance.net/gallery/257766691/gundarevy-sajt-treninga-govorju-uverenno">Кейс на Behance</a>
+          </article>
+          <article class="proj">
+            <span class="tag">Мерч · конкурс · 2026</span>
+            <h3>«Детство продолжается»</h3>
+            <p>Мерч для Елизаветинского детского хосписа: детская аппликация, кот Тёпа, 6 принтов и 21 изделие.</p>
+            <a href="https://www.behance.net/gallery/257358585/detstvo-prodolzhaetsja-merch-dlja-detskogo-hospisa">Кейс на Behance</a>
+          </article>
+          <article class="proj">
+            <span class="tag">Айдентика · оклейка · конкурс</span>
+            <h3>Ситик</h3>
+            <p>Молодёжное направление Ситидрайва: логобук и пакет макетов оклейки автомобилей для производства.</p>
+            <a href="https://www.behance.net/gallery/256353037/sitik-ajdentika-i-oklejka-avtomobilej">Кейс на Behance</a>
+          </article>
+          <article class="proj">
+            <span class="tag">Презентация · моушн</span>
+            <h3>Coca-Cola.ppt</h3>
+            <p>Фан-презентация в эстетике Y2K: десять слайдов и восемь переходов в духе PowerPoint 2003.</p>
+            <a href="https://www.behance.net/gallery/256821493/Coca-Colappt-Y2K-prezentacija">Кейс на Behance</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Опыт</h2>
+      <div class="body">
+        <div class="job">
+          <h3>Графический и веб-дизайнер</h3>
+          <div class="meta">Фриланс · 2025 — сейчас</div>
+          <ul>
+            <li>Коммерческий заказ: сайт тренинга «Говорю. Уверенно» для Александра и Анастасии Гундаревых — структура, дизайн и сборка на Tilda собственным кодом.</li>
+            <li>Конкурсные концепции: мерч для Елизаветинского детского хосписа, айдентика и оклейка Ситик для Ситидрайва.</li>
+            <li>Маскот «Грань» для павильона «АТОМ» — финалист конкурса.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <h3>Менеджер проектов</h3>
+          <div class="meta">IT HR · 5 лет</div>
+          <ul>
+            <li>Запуск и развитие корпоративных цифровых платформ: требования, сроки, коммуникация с заказчиками и командой.</li>
+            <li>Умение слышать задачу за словами и доводить проект до результата в срок — то, что я переношу в дизайн.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Образование</h2>
+      <div class="body">
+        <div class="edu">
+          <h3>Яндекс Практикум — «Графический дизайнер», расширенный курс</h3>
+          <div class="meta">2026 · дипломный проект — айдентика ZERNO</div>
+        </div>
+        <div class="edu">
+          <h3>Яндекс Практикум — «Менеджер проектов», расширенный курс</h3>
+          <div class="meta">2024</div>
+        </div>
+        <div class="edu">
+          <h3>Институт туризма, Москва — специалист по сервису и туризму</h3>
+          <div class="meta">2012 · специализация «IT в социально-культурном сервисе» · диплом с отличием</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Инструменты</h2>
+      <div class="body">
+        <div class="chips">
+          <span class="chip">Figma</span><span class="chip">Tilda</span><span class="chip">Adobe Illustrator</span><span class="chip">Photoshop</span><span class="chip">InDesign</span><span class="chip">After Effects</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+        </div>
+        <p class="muted">Нейросети — для исследований, текстов и визуального поиска. Идея, вкус и решения остаются за мной.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Языки и не только</h2>
+      <div class="body">
+        <div class="rows">
+          <div class="row"><b>Английский</b><span>B2</span></div>
+          <div class="row"><b>Немецкий</b><span>A2</span></div>
+          <div class="row"><b>Итальянский</b><span>A1</span></div>
+        </div>
+        <p class="muted">Пишу акрилом на холсте и снимаю. Живопись учит цвету и фактуре, фотография — свету и композиции.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap"><span>Elena Domata · графический и веб-дизайнер</span><span>Telegram @la_krizia</span></div>
+</footer>
+
+</body>
+</html>
